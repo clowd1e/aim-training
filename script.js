@@ -100,30 +100,58 @@ function finishGame() {
 function createRandomCircle() {
     const circle = document.createElement('div')
     if (a === 1) {
-        const size = getRandomNumber(5, 10)
-        const {width, height} = board.getBoundingClientRect()
-        const x = getRandomNumber(0, width - size)
-        const y = getRandomNumber(0, height - size)
-        setColor(circle)
-        circle.classList.add('circle')
-        circle.style.width = `${size}px`
-        circle.style.height = `${size}px`
-        circle.style.top = `${y}px`
-        circle.style.left = `${x}px`
-        board.append(circle)
+        if (window.innerWidth < window.innerHeight) {
+            const size = getRandomNumber(10, 20)
+            const {width, height} = board.getBoundingClientRect()
+            const x = getRandomNumber(0, width - size)
+            const y = getRandomNumber(0, height - size)
+            setColor(circle)
+            circle.classList.add('circle')
+            circle.style.width = `${size}px`
+            circle.style.height = `${size}px`
+            circle.style.top = `${y}px`
+            circle.style.left = `${x}px`
+            board.append(circle)
+        } else {
+            const size = getRandomNumber(5, 10)
+            const {width, height} = board.getBoundingClientRect()
+            const x = getRandomNumber(0, width - size)
+            const y = getRandomNumber(0, height - size)
+            setColor(circle)
+            circle.classList.add('circle')
+            circle.style.width = `${size}px`
+            circle.style.height = `${size}px`
+            circle.style.top = `${y}px`
+            circle.style.left = `${x}px`
+            board.append(circle)
+        }
     }
     if (a === 0) {
-        const size = getRandomNumber(10, 60)
-        const {width, height} = board.getBoundingClientRect()
-        const x = getRandomNumber(0, width - size)
-        const y = getRandomNumber(0, height - size)
-        setColor(circle)
-        circle.classList.add('circle')
-        circle.style.width = `${size}px`
-        circle.style.height = `${size}px`
-        circle.style.top = `${y}px`
-        circle.style.left = `${x}px`
-        board.append(circle)
+        if (window.innerWidth < window.innerHeight) {
+            const size = getRandomNumber(30, 60)
+            const {width, height} = board.getBoundingClientRect()
+            const x = getRandomNumber(0, width - size)
+            const y = getRandomNumber(0, height - size)
+            setColor(circle)
+            circle.classList.add('circle')
+            circle.style.width = `${size}px`
+            circle.style.height = `${size}px`
+            circle.style.top = `${y}px`
+            circle.style.left = `${x}px`
+            board.append(circle)
+        } else {
+            const size = getRandomNumber(10, 60)
+            const {width, height} = board.getBoundingClientRect()
+            const x = getRandomNumber(0, width - size)
+            const y = getRandomNumber(0, height - size)
+            setColor(circle)
+            circle.classList.add('circle')
+            circle.style.width = `${size}px`
+            circle.style.height = `${size}px`
+            circle.style.top = `${y}px`
+            circle.style.left = `${x}px`
+            board.append(circle)
+        }
     }
 }
 
