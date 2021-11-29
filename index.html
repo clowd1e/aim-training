@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="https://key0.cc/images/small/2103101_875c71d316608378368afc4c9655ef98.png" type="image/x-icon">
+    <title>Aim Training</title>
+  </head>
+  <body>
+    <div class="container">
+    <div class="screen">
+      <h1>Aim Training</h1>
+      <a href="#" class="start" id="start">Начать игру</a>
+      <a href="#" class="start" id="hard-mode">Hard mode</a>
+      <h2>Best score: <span class="best-score-span"></span></h2>
+      <p class="clear-results">Очистить результаты</p>
+    </div>
+
+    <div class="screen">
+      <h1>Выберите время</h1>
+      <ul class="time-list" id="time-list">
+        <li>
+          <button class="time-btn" data-time="10">
+            10 сек
+          </button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="20">
+            20 сек
+          </button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="30">
+            30 сек
+          </button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="60">
+            60 сек
+          </button>
+      </ul>
+    </div>
+
+    <div class="screen">
+      <h3>Осталось <span id="time">00:00</span></h3>
+      <div class="board" id="board"></div>
+      <h3>Жизни: <span id="lifes-span"></span></h3>
+    </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
